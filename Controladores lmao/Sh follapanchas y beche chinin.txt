@@ -1,0 +1,7 @@
+int[] neighbours = game.getNeighbouringNodes(curr, pacmanLastMove);
+
+if (neighbours == null || neighbours.length != 1) {
+    curr = -1;
+} else {
+    curr = neighbours[0];
+}
