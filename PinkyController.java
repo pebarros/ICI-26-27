@@ -5,7 +5,7 @@ import pacman.game.Constants.GHOST;
 import pacman.game.Constants.MOVE;
 import pacman.game.Game;
 
-public class PinkyController {
+public class PinkyController implements GhostIndividualController {
 
 
     public MOVE getMove(Game game, int limit) {
@@ -43,6 +43,10 @@ public class PinkyController {
                         }
                         // Continuar por el pasillo sin dar la vuelta
                         int[] neighbours = game.getNeighbouringNodes(currentNode, pacmanLastMove);
+                        if (neighbours == null || neighbours.length == 0) {
+                            targetJunction = currentNode;
+                            break;
+                        }
                         if (neighbours.length == 1) {
                             nextNode = neighbours[0];
                         } else {

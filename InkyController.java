@@ -5,7 +5,7 @@ import pacman.game.Constants.GHOST;
 import pacman.game.Constants.MOVE;
 import pacman.game.Game;
 
-public class InkyController {
+public class InkyController implements GhostIndividualController {
 
     public MOVE getMove(Game game, int limit) {
         MOVE move = null;
