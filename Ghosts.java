@@ -12,7 +12,7 @@ import pacman.game.Game;
 public class Ghosts extends GhostController{
 	private EnumMap<GHOST, MOVE> moves = new EnumMap<GHOST, MOVE>(GHOST.class);
 	private EnumMap<GHOST, GhostIndividualController> controllers = new EnumMap<>(GHOST.class);
-	private int limit = 15;
+	private int limit = 35;
 	
 	public Ghosts() {
 	    controllers.put(GHOST.BLINKY, new BlinkyController());
